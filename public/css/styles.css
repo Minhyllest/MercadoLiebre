@@ -275,13 +275,13 @@ nav.main-navbar {
         margin: 0 5px;
     }
 
-    section {
+    main section {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         
     }
-    section >article{
+    main section > article{
         width: 45%;
         
     }
@@ -316,5 +316,15 @@ nav.main-navbar {
 
     .main-navbar {
         margin-top: 50px;
+    }
+    main section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    main section >article{
+        width: 23%;
+        
     }
 }
