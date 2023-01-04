@@ -51,7 +51,7 @@ div.submit i {
     
 }
 
-.descripciones .iconos-footer i {
+.iconos-footer i {
     color: #0044aa;
     font-size: 2em;
     margin: 10px;
@@ -111,6 +111,7 @@ main {
 .Caja {
 
     background-color: #fff;
+    position: relative;
 
 }
 
@@ -134,18 +135,18 @@ main article {
 }
 
 main section article i {
-    display: flex;
+    display: block;
     font-size: 16px;
     padding: 5px;
     width: 30px;
     height: 30px;
     border: 1px solid #39b54a;
+    color: #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: relative;
-    top: -85px;
-    left: 85%;
-    color: #39b54a;
+    position: absolute;
+    right:  35px;
+    top:82%;
 }
 
 .precios {
@@ -166,7 +167,7 @@ main div p.descuentos {
 
 }
 
-main p.descripciones {
+.descripciones{
     color: #666;
     padding-left: 15px;
     padding-top: 15px;
@@ -176,6 +177,7 @@ main img.imagenes {
     width: 100%;
     height: auto;
 }
+
 
 @media (max-width : 768px) {
     header nav {
@@ -187,15 +189,12 @@ main img.imagenes {
     div .input{
         font-size: 10px;
     }
+    main section article i{
+       top: 82%;
+    }
 }
 
-@media (min-width : 481px) {
-    main article {
-        box-shadow: 0px 0px 2px rgb(100, 100, 100);
-    }
-    
-    
-}
+
 
 .titulosMain {
     padding: 10px;
@@ -245,7 +244,7 @@ nav.main-navbar {
 }
 
 .hamburguer-button {
-    background-color: #03264c;
+    background-color: #0044aa;
     color: #FFFFFF;
     display: block;
     max-width: 40px;
@@ -256,6 +255,22 @@ nav.main-navbar {
     margin: auto;
 }
 
+@media (min-width:320px){
+    main section article i{
+        top: 74%;
+    }
+}
+@media (min-width:375px){
+    main section article i{
+        top: 76%;
+    }
+}
+@media (min-width : 425px){
+    main section article i{
+        top: 80%;
+    }
+
+}
 @media (min-width : 768px) {
     a.hamburguer-button {
         display: none;
@@ -299,6 +314,48 @@ nav.main-navbar {
         width: 45%;
         
     }
+    .description-card{
+        opacity: 0;
+        height: 0;
+        transition: opacity 250ms ease-in, height 300ms ease-in;
+    }
+    main section article:hover {
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+        
+    }
+    main section article:hover .description-card{
+        opacity: 1 ;
+        height: 40px;
+    }
+    main section article i{
+        transition: transform 300ms ease;
+    }
+    main section article i:hover{
+        transform: rotate(-90deg);
+    }
+    main section article i{
+        top:84%;
+        
+    }
+}
+@media (min-width : 1024px) {
+    main section article i{
+        top: 88%;
+    }
+    footer section  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer section article {
+        width: 33%;
+    }
+    footer section article i{
+        transition: all 400ms ease;
+    }
+    footer section article i:hover{
+        color: #000;
+    }
+    
 }
 
 @media (min-width : 1200px) {
@@ -344,4 +401,69 @@ nav.main-navbar {
     div .input{
         font-size: 20px;
     }
+    main section article i{
+        top: 84%;
+    }
+    footer section  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer section article {
+        width: 33%;
+    }
+    
+}
+.form-styles{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px ;
+
+}
+form div{
+    padding-bottom: 15px;
+}
+form h4{
+    padding-bottom: 15px;
+}
+.create-form{
+    align-items: center;
+    text-align: left;
+    padding: 15px;
+    padding-left: 10%;
+}
+form .register-button{
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0044aa;
+    border: 1px;
+    border-radius: 3px;
+}
+form label{
+    padding: 10px;
+}
+.create-form-login{
+    text-align: center; 
+    padding: 20px; 
+}
+.create-form-login div{
+    padding: 20px;
+}
+.form-styles-login{
+    padding: 12px;
+    width: 50%;
+    border: 0px;
+    border-radius: 5px;
+}
+.login-button{
+    width: 50%;
+    padding: 12px;
+    border: 0px;
+    background-color: #0044aa;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+.login-button:hover{
+    background-color: #0022AA;
 }
